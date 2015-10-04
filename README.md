@@ -16,5 +16,5 @@ docker images
 ### run image
 
 ```[bash]
-docker run -v /c/Users/koduki/git:/git -it koduki/docker4dev /bin/bash
+docker run --rm -v /c/Users/koduki/git/koduki:/git -it -p 3000:3000 koduki/docker4dev /bin/bash
 ```

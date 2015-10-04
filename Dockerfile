@@ -37,6 +37,11 @@ RUN yum install -y \
 RUN yum clean all
 
 #
+# init git
+#
+RUN git config --global user.name "koduki"; git config --global user.email "pascalm3-git@gmail.com"
+   
+#
 # Install npm
 #
 RUN npm install grunt -g
