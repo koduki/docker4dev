@@ -1,7 +1,7 @@
 koduki's Dockerfile
 =======================
 
-simple CentOS7 image.
+Docker image for development env.
 
 How to
 -----------------------
@@ -9,12 +9,12 @@ How to
 ### make image
 
 ```[bash]
-docker build -t koduki/centos7 .
+docker build -t koduki/docker4dev .
 docker images
 ```
 
 ### run image
 
 ```[bash]
-docker run -i -t koduki/centos7 /bin/bash
+docker run -it koduki/docker4dev /bin/bash
 ```
