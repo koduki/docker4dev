@@ -10,6 +10,7 @@ RUN yum update -y
 # Install default packages
 #
 RUN yum install -y \
+  epel-release \
   sudo\
   passwd\
   syslog\
@@ -27,12 +28,18 @@ RUN yum install -y \
   openssh \
   git \
   ruby \
-  ruby-dev
+  ruby-dev \
+  npm
 
 #
 # Install clean up
 #
 RUN yum clean all
+
+#
+# Install npm
+#
+RUN npm install grunt -g
 
 # Edit sudoers file
 # To avoid error: sudo: sorry, you must have a tty to run sudo
